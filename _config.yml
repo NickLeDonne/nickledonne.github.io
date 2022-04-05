@@ -25,12 +25,7 @@ navbar-links:
   Author's home: "https://deanattali.com"
 
 # --- Logo --- #
-
-# Image to show in the navigation bar - works best with a square image
-# Remove this parameter if you don't want an image in the navbar
 avatar: "/assets/img/engagement_photo.jpg"
-
-# By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
 round-avatar: true
 
 # If you want to have an image logo in the top-left corner instead of having the title of the website,
@@ -46,10 +41,10 @@ social-network-links:
   email: "NicholasLeDonne@gmail.com"
 #  rss: true  # remove this line if you don't want to show an RSS link at the bottom
   facebook: nicholas.ledonne
-#  github: NickLeDonne
+  github: NickLeDonne
 #  twitter:
 #  patreon:
-#  youtube: 
+#  youtube:
 #  medium:
 #  reddit:
   linkedin: NicholasLeDonne
