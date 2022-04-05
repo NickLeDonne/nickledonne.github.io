@@ -5,6 +5,10 @@
 
 # --- Required options --- #
 
+# baseurl: /nickledonne.github.io
+url: https://nickledonne.github.io
+destination: ./docs
+
 # Name of website
 title: My Website
 
