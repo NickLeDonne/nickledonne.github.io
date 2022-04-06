@@ -19,11 +19,12 @@ author: Nick LeDonne
 
 navbar-links:
   About Me: "aboutme"
+  Resume: "resume"
   #Pembroke's: "pembrokes"
-  #Resources:
-  #  - Beautiful Jekyll: "https://beautifuljekyll.com"
-  #  - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
+  Resources:
+    - Beautiful Jekyll Theme: "https://beautifuljekyll.com"
+    - Theme Author: "https://deanattali.com"
+    - Markdown Tutorial: "https://www.youtube.com/watch?v=T1itpPvFWHI&list=PLLAZ4kZ9dFpOPV5C5Ay0pHaa0RJFhcmcB"
 
 # --- Logo --- #
 avatar: "/assets/img/engagement_photo.jpg"
