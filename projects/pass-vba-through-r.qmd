@@ -1,0 +1,66 @@
+---
+title: "Passing Variables From Excel/VBA Through R"
+---
+
+##### Passing Excel values into R using VBA allows you to combine Excel's accessibility with R's advanced data analysis tools. It enables automated workflows, reduces manual data transfers, and facilitates more complex analyses than Excel alone can handle.
+
+## VBA Module
+
+``` {.python .VBA}
+'Sub will store variables from cells A1 and A2, trigger an R script via command line, and pass those values through the R script
+
+Sub RunRscript()
+
+    Dim shell As Object
+    Set shell = VBA.CreateObject("WScript.Shell")
+    Dim waitTillComplete As Boolean: waitTillComplete = True
+    Dim style As Integer: style = 1
+    Dim errorCode As Integer
+    Dim var1, var2 As Double
+    Dim RPath, ScriptPath, VarList As String
+
+    var1 = Sheet1.Range("A1").Value
+    var2 = Sheet1.Range("A2").Value
+    VarList = var1 & " " & var2
+    
+    RPath = "RScript"
+    ScriptPath = "C:/Users/nickledonne/Desktop/Test.R"
+     
+    errorCode = shell.Run(RPath & " " & Chr(34) & ScriptPath & Chr(34) & " " & VarList, style, waitTillComplete)
+        
+End Sub
+```
+
+Troubleshooting (Windows):
+
+-   You may receive the error **Method ‘Run’ of object ‘IWshShell3’ failed**. This likely means your VBA Module doens’t have the correct permissions to trigger R.
+-   Method 1: Changing your User Path
+    -   Navigate to: `Control Panel >> User Accounts >> User Accounts (Again) >> Change my environment variables`
+    -   In the top section labeled `User Variables`, edit the `PATH` variable to include the path where Rscript.exe is installed on your desktop.
+    -   You may need to restart your computer afterwards.
+-   Method 2: Specify R Path within VBA
+    -   Substitute in the following: `RPath = C:/Users/nickledonne/Desktop/R-4.4.2/bin/bin/x64/Rscript.exe"`
+    -   This may prevent other users from running the script and is therefore **NOT recommended**.
+-   For more details see *Running RScript through command prompt* at <http://shashiasrblog.blogspot.com/2013/>
+
+## R Script
+
+``` r
+# Script will receive the arguments passed via VBA script, sum those 
+# values together, and write to .csv
+
+args <- commandArgs(trailingOnly=T)
+
+var1 <- as.numeric(args[1])
+var2 <- as.numeric(args[2])
+
+Sum <- var1 + var2
+
+# Write to desktop
+write.csv(Sum, "C:/Users/nickledonne/Desktop/Test_Output.csv", row.names = FALSE)
+```
+
+Comments:
+
+-   Make sure the variables in the VBA script align with the R script.
+-   Variables will be passed into R as strings. Use the as.numeric() function to convert those input variables as needed.

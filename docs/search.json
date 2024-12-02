@@ -47,13 +47,46 @@
     ]
   },
   {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Projects",
+    "objectID": "projects/pass-vba-through-r.html#vba-module",
+    "href": "projects/pass-vba-through-r.html#vba-module",
+    "title": "Passing Variables From Excel/VBA Through R",
+    "section": "VBA Module",
+    "text": "VBA Module\n'Sub will store variables from cells A1 and A2, trigger an R script via command line, and pass those values through the R script\n\nSub RunRscript()\n\n    Dim shell As Object\n    Set shell = VBA.CreateObject(\"WScript.Shell\")\n    Dim waitTillComplete As Boolean: waitTillComplete = True\n    Dim style As Integer: style = 1\n    Dim errorCode As Integer\n    Dim var1, var2 As Double\n    Dim RPath, ScriptPath, VarList As String\n\n    var1 = Sheet1.Range(\"A1\").Value\n    var2 = Sheet1.Range(\"A2\").Value\n    VarList = var1 & \" \" & var2\n    \n    RPath = \"RScript\"\n    ScriptPath = \"C:/Users/nickledonne/Desktop/Test.R\"\n     \n    errorCode = shell.Run(RPath & \" \" & Chr(34) & ScriptPath & Chr(34) & \" \" & VarList, style, waitTillComplete)\n        \nEnd Sub\nTroubleshooting (Windows):\n\nYou may receive the error Method ‘Run’ of object ‘IWshShell3’ failed. This likely means your VBA Module doens’t have the correct permissions to trigger R.\nMethod 1: Changing your User Path\n\nNavigate to: Control Panel &gt;&gt; User Accounts &gt;&gt; User Accounts (Again) &gt;&gt; Change my environment variables\nIn the top section labeled User Variables, edit the PATH variable to include the path where Rscript.exe is installed on your desktop.\nYou may need to restart your computer afterwards.\n\nMethod 2: Specify R Path within VBA\n\nSubstitute in the following: RPath = C:/Users/nickledonne/Desktop/R-4.4.2/bin/bin/x64/Rscript.exe\"\nThis may prevent other users from running the script and is therefore NOT recommended.\n\nFor more details see Running RScript through command prompt at http://shashiasrblog.blogspot.com/2013/",
+    "crumbs": [
+      "Developed Tools/Projects",
+      "Passing Variables From Excel/VBA Through R"
+    ]
+  },
+  {
+    "objectID": "projects/pass-vba-through-r.html#r-script",
+    "href": "projects/pass-vba-through-r.html#r-script",
+    "title": "Passing Variables From Excel/VBA Through R",
+    "section": "R Script",
+    "text": "R Script\n# Script will receive the arguments passed via VBA script, sum those \n# values together, and write to .csv\n\nargs &lt;- commandArgs(trailingOnly=T)\n\nvar1 &lt;- as.numeric(args[1])\nvar2 &lt;- as.numeric(args[2])\n\nSum &lt;- var1 + var2\n\n# Write to desktop\nwrite.csv(Sum, \"C:/Users/nickledonne/Desktop/Test_Output.csv\", row.names = FALSE)\nComments:\n\nMake sure the variables in the VBA script align with the R script.\nVariables will be passed into R as strings. Use the as.numeric() function to convert those input variables as needed.",
+    "crumbs": [
+      "Developed Tools/Projects",
+      "Passing Variables From Excel/VBA Through R"
+    ]
+  },
+  {
+    "objectID": "projects/file-crawler.html",
+    "href": "projects/file-crawler.html",
+    "title": "File Crawler R Script",
+    "section": "",
+    "text": "The get_filtered_filelist R function provides a more efficient way to search through directories based on inclusion/exclusion criteria, particularly for large file systems. It is designed to crawl through a specified folder, apply inclusion and exclusion filters based on patterns, and return a filtered list of files.\n\nFunction Definition\n# Load required packages\nlibrary(dplyr)\nlibrary(stringr)\n\nget_filtered_filelist &lt;- function(folder_path, # directory to search within\n                                  pattern_exclude = NULL, # vector of patterns to exclude from the results\n                                  pattern_include = NULL, # vector of patterns to include in the results\n                                  pattern_include_logic = \"OR\",  # \"OR\" or \"AND\"\n                                  output_to_csv = FALSE, # Outputs the filtered file list to a temporary CSV\n                                  ) {\n\n  filelist &lt;- list.files(path = folder_path, \n                         full.names = TRUE, \n                         recursive = TRUE)\n\n  filelist &lt;- filelist[!grepl(\"~\", filelist)]\n\n  # Apply exclusions\n  if (!is.null(pattern_exclude)) {\n    filelist &lt;- filelist[!grepl(paste(pattern_exclude, collapse = \"|\"), filelist)]\n  }\n\n  # Apply inclusions depending on pattern_include_logic\n  if (!is.null(pattern_include)) {\n    if (pattern_include_logic == \"OR\") {\n      filelist &lt;- filelist[grepl(paste(pattern_include, collapse = \"|\"), filelist)]\n    } else if (pattern_include_logic == \"AND\") {\n      for (pattern in pattern_include) {\n        filelist &lt;- filelist[grepl(pattern, filelist)]\n      }\n    } else {\n      stop(\"Invalid pattern_include_logic specified. Please use 'OR' or 'AND'.\")\n    }\n  }\n\n  file_tibble &lt;- tibble(filepath = filelist)\n\n  if (output_to_csv) {\n    temp_file &lt;- tempfile(fileext = \".csv\")\n    write.csv(file_tibble, temp_file, row.names = FALSE)\n    shell(temp_file, wait = FALSE)\n  } else {\n    print(file_tibble)\n  }\n\n  return(file_tibble)\n}\n\n\nInstall missing libraries using:\ninstall.packages(c(\"dplyr\", \"stringr\"))\n\n\nFunction Usage\nfilelist &lt;- get_filtered_filelist(\n  folder_path = \"C:/Users/Documents\",\n  pattern_exclude = c(\".xlsb\"),\n  pattern_include = c(\"Calendar\", \"Holiday\"),\n  pattern_include_logic = \"AND\",\n  output_to_csv = FALSE\n)",
+    "crumbs": [
+      "Developed Tools/Projects",
+      "File Crawler R Script"
+    ]
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Developed Tools/Projects",
     "section": "",
     "text": "VBA Extractor\nFilelist Crawler\nMarch Madness\nBulk Excel File Manipulation\nExcel-to-CSV Splitter\n\n\nprint(\"Hello World\")\n\n[1] \"Hello World\"",
     "crumbs": [
-      "Projects"
+      "Developed Tools/Projects"
     ]
   },
   {
