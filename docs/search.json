@@ -49,9 +49,9 @@
   {
     "objectID": "projects/index.html",
     "href": "projects/index.html",
-    "title": "Developed Tools/Projects",
+    "title": "Developed Projects/Tools",
     "section": "",
-    "text": "VBA Extractor\nFilelist Crawler\nMarch Madness\nBulk Excel File Manipulation\nExcel-to-CSV Splitter\n\n\nprint(\"Hello World\")\n\n[1] \"Hello World\"",
+    "text": "VBA Extractor\nFilelist Crawler\nPass VBA to R\nMarch Madness\nBulk Excel File Manipulation\nExcel-to-CSV Splitter",
     "crumbs": [
       "Projects/Tools"
     ]

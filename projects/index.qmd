@@ -1,13 +1,10 @@
 ---
-title: "Developed Tools/Projects"
+title: "Developed Projects/Tools"
 ---
 
--   ~~VBA Extractor~~
--   ~~Filelist Crawler~~
--   March Madness
--   Bulk Excel File Manipulation
--   Excel-to-CSV Splitter
-
-```{r}
-print("Hello World")
-```
+-   [x] VBA Extractor
+-   [x] Filelist Crawler
+-   [x] Pass VBA to R
+-   [ ] March Madness
+-   [ ] Bulk Excel File Manipulation
+-   [ ] Excel-to-CSV Splitter
