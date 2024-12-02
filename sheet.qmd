@@ -1,0 +1,64 @@
+---
+title: "Google Sheets Integration Example"
+output: html_document
+---
+
+Below is the data fetched from the Google Sheet:
+
+[Link to Workbook](https://docs.google.com/spreadsheets/d/14RCqNNB55DSfq162Amr70cVV06nMhyQt-bWfnqQ1YRU/edit?gid=0#gid=0)
+
+::: {#google-sheet-data}
+```{=html}
+<script>
+// Define the Google Sheets ID as a variable
+const sheetId = "2PACX-1vSPBY4G__amyxM9viOAO9DmeXv58m2RBdKty-iO4uRNqVwqrt6C6YDi3WGhWLA9Q4b4p0vEUtY11CGM";
+
+// Use the variable in the fetch URL
+fetch(`https://docs.google.com/spreadsheets/d/e/${sheetId}/pub?output=csv`)
+   .then(response => response.text())
+   .then(data => {
+      // Parse the CSV data (optional, depending on your needs)
+      const rows = data.split('\n').map(row => row.split(','));
+
+      // Create an HTML table to display the data
+      let table = '<table border="1"><tr>';
+      
+      // Create headers based on the first row of CSV data
+      rows[0].forEach(cell => {
+         table += `<th>${cell}</th>`;
+      });
+      table += '</tr>';
+
+      // Loop through the rows of data and display them in the table
+      rows.slice(1).forEach((row, rowIndex) => {
+         table += '<tr>';
+         row.forEach((cell, colIndex) => {
+            // Make each cell editable by adding contenteditable="true"
+            table += `<td contenteditable="true" data-row="${rowIndex}" data-col="${colIndex}">${cell}</td>`;
+         });
+         table += '</tr>';
+      });
+      table += '</table>';
+
+      // Insert the table into the webpage
+      document.getElementById('google-sheet-data').innerHTML = table;
+
+      // Add event listener to save the changes to localStorage
+      document.querySelectorAll('td[contenteditable="true"]').forEach(cell => {
+         cell.addEventListener('blur', (event) => {
+            const row = event.target.getAttribute('data-row');
+            const col = event.target.getAttribute('data-col');
+            const newValue = event.target.textContent;
+            console.log(`Row: ${row}, Col: ${col}, New Value: ${newValue}`);
+            
+            // Store the updated value in localStorage (or handle saving to Google Sheets API)
+            localStorage.setItem(`sheet_${row}_${col}`, newValue);
+         });
+      });
+   })
+   .catch(error => {
+      console.error('Error fetching data: ', error);
+   });
+</script>
+```
+:::

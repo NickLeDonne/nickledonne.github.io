@@ -26,6 +26,10 @@ website:
     contents:
       - href: index.qmd
         text: Resume
+      # - href: sheet.qmd
+      #   text: Google Sheets
+      # - href: pembrokes.qmd
+      #   text: Pembroke's
       - section: projects/index.qmd
         text: Projects/Tools
         contents:

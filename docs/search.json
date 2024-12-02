@@ -68,6 +68,13 @@
     ]
   },
   {
+    "objectID": "sheet.html",
+    "href": "sheet.html",
+    "title": "Google Sheets Integration Example",
+    "section": "",
+    "text": "Below is the data fetched from the Google Sheet:\nLink to Workbook"
+  },
+  {
     "objectID": "projects/pass-vba-through-r.html#vba-module",
     "href": "projects/pass-vba-through-r.html#vba-module",
     "title": "Passing Variables From Excel/VBA Through R",
