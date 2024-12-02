@@ -6,7 +6,7 @@ _quarto.yml
 **/.quarto/
 
 # Quarto output files (for GitHub Pages, ensure index.html and other files are pushed)
-docs/
+# docs/
 
 # RStudio project files
 .Rproj.user/

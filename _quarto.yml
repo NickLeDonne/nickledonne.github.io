@@ -1,6 +1,7 @@
 # Settings in this file are applied across all .qmd files
 project: 
   type: website
+  output-dir: docs
   
 website: 
   title: "Nicholas LeDonne" 

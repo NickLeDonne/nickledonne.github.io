@@ -1,0 +1,10 @@
+/* css styles */
+.right-align {
+    float: right;
+}
+
+.tiny-centered {
+    font-size: 12px;
+    text-align: center;
+    display: block;  /* Ensures text-align works */
+}

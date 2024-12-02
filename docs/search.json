@@ -1,0 +1,52 @@
+[
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "VBA Extractor\nFilelist Crawler\nMarch Madness\nBulk Excel File Manipulation\nExcel-to-CSV Splitter\n\n\nprint(\"Hello World\")\n\n[1] \"Hello World\"",
+    "crumbs": [
+      "🛠️ Projects"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Nicholas LeDonne",
+    "section": "",
+    "text": "4034 Pompton Ct, Elgin, IL 60124 Nicholas.LeDonne@gmail.com (847) 845-9953",
+    "crumbs": [
+      "💼 Resume"
+    ]
+  },
+  {
+    "objectID": "index.html#work-experience",
+    "href": "index.html#work-experience",
+    "title": "Nicholas LeDonne",
+    "section": "Work Experience",
+    "text": "Work Experience\n\nSenior Actuarial Analyst – Pricing Modeling\n\nCentene Corporation 2019 → Current | Chicago, IL\n\nResponsible for development of pricing and filing models that support Centene’s ACA individual health products\nDeveloped series of scripts that housed and produced Actuarial Memorandums for state filings\nStage projected membership for internal pricing model, including deploying R Shiny app for visualizations\nAssist in maintaining internal R packages and processes\nDevelop and maintain internal VBA suite of macros/functions\n\n\n\n\nActuarial Analyst – Regional Services, Reserving Expert\n\nAetna Inc. 2016 → 2018 | Chicago, IL\n\nLead teams during monthly reserve cycles in analyzing hundreds of large claims to guarantee timely/accurate accruals\n\nInvolved in creating LCAD (large claims accrual database)\n\nHelped construct Aetna’s actuarial training program by designing a website and coordinating a presentation series\n\nCollaborated with underwriting and sales departments on custom benefit requests\n\nSupported rating systems maintenance, small group rate testing/filing, and large group pricing\n\nAssisted with talent recruitment by interviewing candidates and attending career fairs\n\n\n\n\nFacility Adviser\n\nNIU Campus Recreation Center 2015 | Dekalb, IL\n\nCollaborated with management to report and address facility issues\nHandled patron complaints effectively, improving customer satisfaction\nEnsured patron safety by responding to emergencies within and outside the facility",
+    "crumbs": [
+      "💼 Resume"
+    ]
+  },
+  {
+    "objectID": "index.html#technical-skills",
+    "href": "index.html#technical-skills",
+    "title": "Nicholas LeDonne",
+    "section": "Technical Skills",
+    "text": "Technical Skills\n\nExpertise in R\n\nAdvanced data manipulation, particularly using dplyr package\nPackage development\nRStudio Connect and S3 integration\n\n\n\nExpertise in VBA/Excel\n\nCustom UDF development\nProcedure realignment with a focus on modularity and efficiency\n\n\n\nOther Proficiencies\n\nPython, SQL, HTML, and C++",
+    "crumbs": [
+      "💼 Resume"
+    ]
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Nicholas LeDonne",
+    "section": "Education",
+    "text": "Education\n\nNorthern Illinois University\nBS in Statistics (Emphasis in Actuarial Science), Minor in Finance\n2012 → 2015 | Dekalb, IL\n\n\nActuarial Exam\n\nExam P\nExam FM\nExam IFM\nExam SRM\nExam PA\nFAP Modules\nVEE",
+    "crumbs": [
+      "💼 Resume"
+    ]
+  }
+]
