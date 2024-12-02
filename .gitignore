@@ -28,3 +28,4 @@ Thumbs.db
 
 # IDE files (if you're using RStudio)
 *.Rproj
+/.quarto/
