@@ -25,11 +25,11 @@ website:
     collapse-level: 1
     contents:
       - href: index.qmd
-        text: 💼 Resume
+        text: Resume
       - href: projects.qmd
-        text: 🛠️ Projects
+        text: Projects
       - href: pembrokes.qmd
-        text: ☕ Pembroke's
+        text: Pembroke's
 
 format:
   html:
