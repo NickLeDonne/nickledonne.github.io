@@ -26,12 +26,11 @@ website:
     contents:
       - href: index.qmd
         text: Resume
-      - href: projects.qmd
-        text: Projects
-      # - href: pembrokes.qmd
-      #   text: Pembroke's
-      # - href: test.qmd
-      #   text: Test
+      - section: projects/index.qmd
+        text: Developed Tools/Projects
+        contents:
+          - projects/pass-vba-through-r.qmd
+          - projects/file-crawler.qmd
 
 format:
   html:

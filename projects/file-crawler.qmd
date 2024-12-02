@@ -1,0 +1,76 @@
+---
+title: "File Crawler R Script"
+format: html
+---
+
+The `get_filtered_filelist` R function provides a more efficient way to search through directories based on inclusion/exclusion criteria, particularly for large file systems. It is designed to crawl through a specified folder, apply inclusion and exclusion filters based on patterns, and return a filtered list of files.
+
+### Function Definition
+
+``` r
+# Load required packages
+library(dplyr)
+library(stringr)
+
+get_filtered_filelist <- function(folder_path, # directory to search within
+                                  pattern_exclude = NULL, # vector of patterns to exclude from the results
+                                  pattern_include = NULL, # vector of patterns to include in the results
+                                  pattern_include_logic = "OR",  # "OR" or "AND"
+                                  output_to_csv = FALSE, # Outputs the filtered file list to a temporary CSV
+                                  ) {
+
+  filelist <- list.files(path = folder_path, 
+                         full.names = TRUE, 
+                         recursive = TRUE)
+
+  filelist <- filelist[!grepl("~", filelist)]
+
+  # Apply exclusions
+  if (!is.null(pattern_exclude)) {
+    filelist <- filelist[!grepl(paste(pattern_exclude, collapse = "|"), filelist)]
+  }
+
+  # Apply inclusions depending on pattern_include_logic
+  if (!is.null(pattern_include)) {
+    if (pattern_include_logic == "OR") {
+      filelist <- filelist[grepl(paste(pattern_include, collapse = "|"), filelist)]
+    } else if (pattern_include_logic == "AND") {
+      for (pattern in pattern_include) {
+        filelist <- filelist[grepl(pattern, filelist)]
+      }
+    } else {
+      stop("Invalid pattern_include_logic specified. Please use 'OR' or 'AND'.")
+    }
+  }
+
+  file_tibble <- tibble(filepath = filelist)
+
+  if (output_to_csv) {
+    temp_file <- tempfile(fileext = ".csv")
+    write.csv(file_tibble, temp_file, row.names = FALSE)
+    shell(temp_file, wait = FALSE)
+  } else {
+    print(file_tibble)
+  }
+
+  return(file_tibble)
+}
+```
+
+### Install missing libraries using:
+
+``` r
+install.packages(c("dplyr", "stringr"))
+```
+
+### Function Usage
+
+``` r
+filelist <- get_filtered_filelist(
+  folder_path = "C:/Users/Documents",
+  pattern_exclude = c(".xlsb"),
+  pattern_include = c("Calendar", "Holiday"),
+  pattern_include_logic = "AND",
+  output_to_csv = FALSE
+)
+```
