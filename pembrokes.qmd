@@ -1,8 +1,12 @@
 ---
 title: "Pembroke's"
 format: html
-sidebar: false
+# sidebar: false
 # theme: yeti
 ---
 
-## Menu
+### Coming Soon...
+
+<div style="text-align: center;">
+  <img src="images/pembrokes.png" alt="Pembroke's Image" width="400">
+</div>

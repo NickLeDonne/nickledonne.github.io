@@ -7,6 +7,6 @@ The `docs` directory houses the files that are ultimately hosted on your GitHub 
 ``` c
 quarto render
 git add docs
-git commit -m "Publish site to docs/"
+git commit -m "Publish site to docs"
 git push
 ```
