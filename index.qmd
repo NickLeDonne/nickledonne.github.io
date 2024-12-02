@@ -1,11 +1,79 @@
 ---
-title: "QUARTO"
+title: "Nicholas LeDonne"
+format: html
+page-navigation: true
+header-includes: # Center all H1 elements
+  - |
+    <style>
+      H1 {
+        text-align: center;
+      }
+    </style>
 ---
+[[4034 Pompton Ct, Elgin, IL 60124](https://maps.app.goo.gl/E8RKooyhrDqhXjzc7)]{.tiny-centered}
+[[Nicholas.LeDonne\@gmail.com](mailto:Nicholas.LeDonne@gmail.com?subject=I%20saw%20your%20resume...)]{.tiny-centered}
+[[(847) 845-9953](tel:1-847-845-9953)]{.tiny-centered}
+<br>
 
-This is a Quarto website.
+## Work Experience
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+### Senior Actuarial Analyst – Pricing Modeling
 
-```{r}
-1 + 1
-```
+##### **Centene Corporation** [2019 → Current \| *Chicago, IL*]{.right-align}
+
+-   Responsible for development of pricing and filing models that support Centene's ACA individual health products
+- Developed series of scripts that housed and produced Actuarial Memorandums for state filings
+-   Stage projected membership for internal pricing model, including deploying R Shiny app for visualizations
+-   Assist in maintaining internal R packages and processes 
+- Develop and maintain internal VBA suite of macros/functions
+
+### Actuarial Analyst – Regional Services, Reserving Expert
+
+##### **Aetna Inc.** [2016 → 2018 \| *Chicago, IL*]{.right-align}
+
+-   Lead teams during monthly reserve cycles in analyzing hundreds of large claims to guarantee timely/accurate accruals\
+-   Involved in creating LCAD (large claims accrual database)\
+-   Helped construct Aetna’s actuarial training program by designing a website and coordinating a presentation series\
+-   Collaborated with underwriting and sales departments on custom benefit requests\
+-   Supported rating systems maintenance, small group rate testing/filing, and large group pricing\
+-   Assisted with talent recruitment by interviewing candidates and attending career fairs
+
+### Facility Adviser
+
+##### **NIU Campus Recreation Center** [2015 \| *Dekalb, IL*]{.right-align}
+
+- Collaborated with management to report and address facility issues
+- Handled patron complaints effectively, improving customer satisfaction
+- Ensured patron safety by responding to emergencies within and outside the facility
+
+## Technical Skills
+
+##### **Expertise in R** 
+- Advanced data manipulation, particularly using `dplyr` package
+- Package development
+- RStudio Connect and S3 integration
+
+##### **Expertise in VBA/Excel**
+- Custom UDF development
+- Procedure realignment with a focus on modularity and efficiency
+
+##### **Other Proficiencies**
+- Python, SQL, HTML, and C++
+
+
+## Education
+
+### Northern Illinois University
+
+**BS in Statistics (Emphasis in Actuarial Science), Minor in Finance**\
+*2012 → 2015 \| Dekalb, IL*
+
+### Actuarial Exam
+
+-   Exam P
+-   Exam FM
+-   Exam IFM
+-   Exam SRM
+-   Exam PA
+-   FAP Modules
+-   VEE
