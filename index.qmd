@@ -48,7 +48,7 @@ header-includes: # Center all H1 elements
 
 ##### **Expertise in R**
 
--   Advanced data manipulation, particularly using `dplyr` package
+-   Advanced data manipulation, particularly using `tidyverse` package suite
 -   Package development
 -   RStudio Connect and S3 integration
 
@@ -69,5 +69,5 @@ header-includes: # Center all H1 elements
 *2012 → 2015 \| Dekalb, IL*
 
 ### Exam Progress
-- P, FM, IFM, SRM, PA, ATPA, FAP, VEE
 
+-   P, FM, IFM, SRM, PA, ATPA, FAP, VEE

@@ -31,7 +31,7 @@
     "href": "index.html#technical-skills",
     "title": "Nicholas LeDonne",
     "section": "Technical Skills",
-    "text": "Technical Skills\n\nExpertise in R\n\nAdvanced data manipulation, particularly using dplyr package\nPackage development\nRStudio Connect and S3 integration\n\n\n\nExpertise in VBA/Excel\n\nCustom UDF development\nProcedure realignment with a focus on modularity and efficiency\n\n\n\nOther Proficiencies\n\nPython, SQL, HTML, and C++",
+    "text": "Technical Skills\n\nExpertise in R\n\nAdvanced data manipulation, particularly using tidyverse package suite\nPackage development\nRStudio Connect and S3 integration\n\n\n\nExpertise in VBA/Excel\n\nCustom UDF development\nProcedure realignment with a focus on modularity and efficiency\n\n\n\nOther Proficiencies\n\nPython, SQL, HTML, and C++",
     "crumbs": [
       "Resume"
     ]
