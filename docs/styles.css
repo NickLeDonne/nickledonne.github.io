@@ -8,3 +8,10 @@
     text-align: center;
     display: block;  /* Ensures text-align works */
 }
+
+/* Target the sidebar logo specifically */
+.sidebar img {
+    border-radius: 20%;
+    max-width: 175px;   /* Adjust size */
+    margin: auto;       /* Center the logo */
+}

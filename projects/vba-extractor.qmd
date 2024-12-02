@@ -1,0 +1,125 @@
+---
+title: "VBA Extractor Python Script"
+format: html
+---
+
+This Python script scans the current directory for Excel files and extracts their VBA code into a dedicated subfolder named after the workbook. If multiple workbooks are present in the directory, the script prompts the user to specify the file to process.
+
+### How to use:
+
+1.  Save this script as a .py file in the folder (using File Explorer) that contains the desired Excel workbook(s)
+2.  Double-click the script file to execute it
+3.  If multiple workbooks are detected, select the desired file from the list when prompted
+4.  The extracted VBA code will be saved in a subfolder named `<workbook_name>_vba`
+
+### Python Code
+
+``` python
+import os
+import shutil
+import subprocess
+import sys
+
+## Check if a package is installed, and install it if not
+def install_package(package):
+    try:
+        __import__(package)
+        print(f"{package} is already installed.")
+    except ImportError:
+        print(f"{package} is not installed. Installing...")
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "--user", package])
+
+## Install necessary packages only if not already installed
+try:
+    import oletools
+except ImportError:
+    install_package('oletools')
+from oletools.olevba3 import VBA_Parser
+
+
+# 2. Define the file extensions and settings
+EXCEL_FILE_EXTENSIONS = ('xlsb', 'xlsx', 'xlsm')
+KEEP_NAME = False  # Set this to True if you would like to keep "Attribute VB_Name"
+
+
+# 3. Define functions
+def parse(workbook_path):
+    print(f"Processing workbook: {workbook_path}")
+    # Create a subfolder named <workbook_name>_vba for saving the extracted VBA code
+    workbook_name = os.path.splitext(os.path.basename(workbook_path))[0]
+    vba_path = f'{workbook_name}_vba'  # Create a folder name using the workbook name
+    if not os.path.exists(vba_path):
+        os.makedirs(vba_path)
+        print(f"Created directory for VBA exports: {vba_path}")
+    # Parse the workbook for VBA macros
+    vba_parser = VBA_Parser(workbook_path)
+    if vba_parser.detect_vba_macros():
+        print(f"VBA macros detected in {workbook_path}. Extracting macros...")
+        vba_modules = vba_parser.extract_all_macros()
+        if not vba_modules:
+            print(f"Warning: No modules extracted from {workbook_path}.")
+    else:
+        print(f"No VBA macros detected in {workbook_path}. Skipping this file.")
+        return  # Skip processing this workbook if no VBA macros are found
+    # Process each macro module in the workbook
+    for _, _, filename, content in vba_modules:
+        print(f"Processing VBA module: {filename}")
+        # Decode the VBA content and split into lines
+        decoded_content = content
+        lines = decoded_content.split('\r\n') if '\r\n' in decoded_content else decoded_content.split('\n')
+        if lines:
+            content = []
+            for line in lines:
+                # Filter lines based on VB_Name if KEEP_NAME is set
+                if line.startswith('Attribute') and 'VB_' in line:
+                    if 'VB_Name' in line and KEEP_NAME:
+                        content.append(line)
+                else:
+                    content.append(line)
+            # If content has non-empty lines, write to file
+            if content and content[-1] == '':
+                content.pop(len(content) - 1)
+            non_empty_lines_of_code = len([c for c in content if c])
+            if non_empty_lines_of_code > 0:
+                print(f"  - Extracted {non_empty_lines_of_code} lines of VBA code from module {filename}.")
+                with open(os.path.join(vba_path, filename), 'w', encoding='utf-8') as f:
+                    f.write('\n'.join(content))
+                print(f"  - VBA code from {filename} saved to {os.path.join(vba_path, filename)}\n")
+            else:
+                print(f"  - No usable code in {filename}. Skipping save.\n")
+        else:
+            print(f"  - Empty or malformed content in module {filename}. Skipping.\n")
+def process_workbooks():
+    print("\nStarting workbook processing...\n")
+    # Get all Excel files in the current directory
+    excel_files = [f for f in os.listdir('.') if os.path.isfile(f) and f.lower().endswith(EXCEL_FILE_EXTENSIONS)]
+    # Check if there are any Excel files
+    if not excel_files:
+        print("No Excel files found in the current directory.")
+        input("Press Enter to exit...")
+        sys.exit()
+    # Display the files for selection
+    print("Excel files found in the current directory:")
+    for i, file_name in enumerate(excel_files, start=1):
+        print(f"{i}. {file_name}")
+    # Prompt user to select a file
+    while True:
+        try:
+            file_index = int(input("\nEnter the number corresponding to the file you want to process: ")) - 1
+            if 0 <= file_index < len(excel_files):
+                selected_file = excel_files[file_index]
+                break
+            else:
+                print("Invalid selection. Please enter a number corresponding to the listed files.")
+        except ValueError:
+            print("Invalid input. Please enter a number.")
+    # Process the selected file
+    parse(selected_file)
+    print("\nProcessing complete. All eligible workbooks have been processed.\n")
+
+
+# Step 4. Execute the main workflow
+if __name__ == '__main__':
+    process_workbooks()
+    input("Press Enter to exit...")  # Keep the window open
+```

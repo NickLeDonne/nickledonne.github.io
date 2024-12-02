@@ -20,17 +20,18 @@ website:
         href: https://github.com/NickLeDonne
         text: "GitHub"
   
-    style: "floating"
+    style: "docked"
     search: false
     collapse-level: 1
     contents:
       - href: index.qmd
         text: Resume
       - section: projects/index.qmd
-        text: Developed Tools/Projects
+        text: Projects/Tools
         contents:
           - projects/pass-vba-through-r.qmd
           - projects/file-crawler.qmd
+          - projects/vba-extractor.qmd
 
 format:
   html:
