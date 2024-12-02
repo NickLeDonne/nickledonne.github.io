@@ -38,7 +38,7 @@ header-includes: # Center all H1 elements
 
 ### Facility Adviser
 
-##### **NIU Campus Recreation Center** [2015 \| ]{.right-align}*DeKalb, IL*
+##### **NIU Campus Recreation Center** [2015 \| *Dekalb, IL*]{.right-align}
 
 -   Collaborated with management to report and address facility issues
 -   Handled patron complaints effectively, improving customer satisfaction
