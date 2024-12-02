@@ -28,8 +28,10 @@ website:
         text: Resume
       - href: projects.qmd
         text: Projects
-      - href: pembrokes.qmd
-        text: Pembroke's
+      # - href: pembrokes.qmd
+      #   text: Pembroke's
+      # - href: test.qmd
+      #   text: Test
 
 format:
   html:

@@ -1,0 +1,43 @@
+---
+title: "Test"
+---
+
+### Website Ideas
+
+-   Landing Page (About)
+
+-   Create hidden page: <https://nickledonne.github.io/test.html>
+
+-   Resume
+
+-   Projects (In the style of a blog)
+
+    -   Personal notes on how to build a quarto website
+
+    -   ~~Excel Scheduler~~
+
+    -   March Madness
+
+    -   Passing VBA to R
+
+    -   ~~Snakes & Ladders~~
+
+-   Pembroke's (Hidden)
+
+    -   Description of what Pembroke's is
+
+    -   Menu w/Recipes
+
+    -   Brew methods
+
+    -   Coffee gear
+
+    -   Cocktails
+
+-   Exam notes
+
+-   Wrigley Dog-Sitting website
+
+-   Links to social networks
+
+    -   GitHub, Linkedin, Facebook, Instagram, Untappd

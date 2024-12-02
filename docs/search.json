@@ -1,23 +1,10 @@
 [
   {
-    "objectID": "pembrokes.html",
-    "href": "pembrokes.html",
-    "title": "Pembroke’s",
+    "objectID": "test.html",
+    "href": "test.html",
+    "title": "Test",
     "section": "",
-    "text": "Coming Soon…",
-    "crumbs": [
-      "Pembroke's"
-    ]
-  },
-  {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Projects",
-    "section": "",
-    "text": "VBA Extractor\nFilelist Crawler\nMarch Madness\nBulk Excel File Manipulation\nExcel-to-CSV Splitter\n\n\nprint(\"Hello World\")\n\n[1] \"Hello World\"",
-    "crumbs": [
-      "Projects"
-    ]
+    "text": "Website Ideas\n\nLanding Page (About)\nCreate hidden page: https://nickledonne.github.io/test.html\nResume\nProjects (In the style of a blog)\n\nPersonal notes on how to build a quarto website\nExcel Scheduler\nMarch Madness\nPassing VBA to R\nSnakes & Ladders\n\nPembroke’s (Hidden)\n\nDescription of what Pembroke’s is\nMenu w/Recipes\nBrew methods\nCoffee gear\nCocktails\n\nExam notes\nWrigley Dog-Sitting website\nLinks to social networks\n\nGitHub, Linkedin, Facebook, Instagram, Untappd"
   },
   {
     "objectID": "index.html",
@@ -58,5 +45,22 @@
     "crumbs": [
       "Resume"
     ]
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "VBA Extractor\nFilelist Crawler\nMarch Madness\nBulk Excel File Manipulation\nExcel-to-CSV Splitter\n\n\nprint(\"Hello World\")\n\n[1] \"Hello World\"",
+    "crumbs": [
+      "Projects"
+    ]
+  },
+  {
+    "objectID": "pembrokes.html",
+    "href": "pembrokes.html",
+    "title": "Pembroke’s",
+    "section": "",
+    "text": "Coming Soon…"
   }
 ]
