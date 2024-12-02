@@ -1,0 +1,40 @@
+# Settings in this file are applied across all .qmd files
+project: 
+  type: website
+  
+website: 
+  title: "Nicholas LeDonne" 
+    
+  page-footer:
+    right: ""
+  sidebar:
+    logo: "images/profile_pic.jpg"
+    pinned: false
+    align: center
+    tools: 
+      - icon: linkedin
+        href: https://www.linkedin.com/in/nicholas-ledonne-517114a7
+        text: "LinkedIn"
+      - icon: github
+        href: https://github.com/NickLeDonne
+        text: "GitHub"
+  
+    style: "floating"
+    search: false
+    collapse-level: 1
+    contents:
+      - href: index.qmd
+        text: 💼 Resume
+      - href: projects.qmd
+        text: 🛠️ Projects
+      - href: pembrokes.qmd
+        text: ☕ Pembroke's
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    toc-depth: 2
+
+editor: visual
