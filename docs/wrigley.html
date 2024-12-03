@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Passing Variables From Excel/VBA Through R – Nicholas LeDonne</title>
+<title>Wrigley Dog Sitting – Nicholas LeDonne</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,58 +20,24 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-22381ab97ffb8a420d3841344730e94d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-22381ab97ffb8a420d3841344730e94d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -101,95 +67,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-sidebar floating">
+<body>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../projects/index.html">Projects/Tools</a></li><li class="breadcrumb-item"><a href="../projects/pass-vba-through-r.html">Passing Variables From Excel/VBA Through R</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-    </div>
-  </nav>
-</header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="../index.html" class="sidebar-logo-link">
-      <img src="../images/profile_pic.jpg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
-      </a>
-      <div class="sidebar-tools-main">
-    <a href="https://www.linkedin.com/in/nicholas-ledonne-517114a7" title="LinkedIn" class="quarto-navigation-tool px-1" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-    <a href="https://github.com/NickLeDonne" title="GitHub" class="quarto-navigation-tool px-1" aria-label="GitHub"><i class="bi bi-github"></i></a>
-</div>
-      </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Resume</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../projects/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Projects/Tools</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../projects/pass-vba-through-r.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Passing Variables From Excel/VBA Through R</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../projects/file-crawler.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">File Crawler R Script</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../projects/vba-extractor.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">VBA Extractor Python Script</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul class="collapse">
-  <li><a href="#vba-module" id="toc-vba-module" class="nav-link active" data-scroll-target="#vba-module">VBA Module</a></li>
-  <li><a href="#r-script" id="toc-r-script" class="nav-link" data-scroll-target="#r-script">R Script</a></li>
+  <li><a href="#about" id="toc-about" class="nav-link active" data-scroll-target="#about">About</a></li>
+  <li><a href="#contact-information" id="toc-contact-information" class="nav-link" data-scroll-target="#contact-information">📞 Contact Information</a></li>
+  <li><a href="#vet-information" id="toc-vet-information" class="nav-link" data-scroll-target="#vet-information">⚕️ Vet Information</a></li>
+  <li><a href="#food" id="toc-food" class="nav-link" data-scroll-target="#food">🍗 Food</a></li>
+  <li><a href="#walks" id="toc-walks" class="nav-link" data-scroll-target="#walks">🦮 Walks</a></li>
+  <li><a href="#potty-schedule" id="toc-potty-schedule" class="nav-link" data-scroll-target="#potty-schedule">🧻 Potty Schedule</a></li>
+  <li><a href="#commands" id="toc-commands" class="nav-link" data-scroll-target="#commands">🗣️ Commands</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../projects/index.html">Projects/Tools</a></li><li class="breadcrumb-item"><a href="../projects/pass-vba-through-r.html">Passing Variables From Excel/VBA Through R</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Passing Variables From Excel/VBA Through R</h1>
+<h1 class="title">Wrigley Dog Sitting</h1>
 </div>
 
 
@@ -206,68 +114,118 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="passing-excel-values-into-r-using-vba-allows-you-to-combine-excels-accessibility-with-rs-advanced-data-analysis-tools.-it-enables-automated-workflows-reduces-manual-data-transfers-and-facilitates-more-complex-analyses-than-excel-alone-can-handle." class="level5">
-<h5 class="anchored" data-anchor-id="passing-excel-values-into-r-using-vba-allows-you-to-combine-excels-accessibility-with-rs-advanced-data-analysis-tools.-it-enables-automated-workflows-reduces-manual-data-transfers-and-facilitates-more-complex-analyses-than-excel-alone-can-handle.">Passing Excel values into R using VBA allows you to combine Excel’s accessibility with R’s advanced data analysis tools. It enables automated workflows, reduces manual data transfers, and facilitates more complex analyses than Excel alone can handle.</h5>
-</section>
-<section id="vba-module" class="level2">
-<h2 class="anchored" data-anchor-id="vba-module">VBA Module</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python VBA code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">'Sub will store variables from cells A1 and A2, trigger an R script via command line, and pass those values through the R script</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="er">Sub RunRscript</span>()</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    Dim shell As Object</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    Set shell <span class="op">=</span> VBA.CreateObject(<span class="st">"WScript.Shell"</span>)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    Dim waitTillComplete As Boolean: waitTillComplete <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    Dim style As Integer: style <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    Dim errorCode As Integer</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    Dim var1, var2 As Double</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    Dim RPath, ScriptPath, VarList As String</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    var1 <span class="op">=</span> Sheet1.Range(<span class="st">"A1"</span>).Value</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    var2 <span class="op">=</span> Sheet1.Range(<span class="st">"A2"</span>).Value</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    VarList <span class="op">=</span> var1 <span class="op">&amp;</span> <span class="st">" "</span> <span class="op">&amp;</span> var2</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    RPath <span class="op">=</span> <span class="st">"RScript"</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    ScriptPath <span class="op">=</span> <span class="st">"C:/Users/nickledonne/Desktop/Test.R"</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>     </span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    errorCode <span class="op">=</span> shell.Run(RPath <span class="op">&amp;</span> <span class="st">" "</span> <span class="op">&amp;</span> Chr(<span class="dv">34</span>) <span class="op">&amp;</span> ScriptPath <span class="op">&amp;</span> Chr(<span class="dv">34</span>) <span class="op">&amp;</span> <span class="st">" "</span> <span class="op">&amp;</span> VarList, style, waitTillComplete)</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>End Sub</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Troubleshooting (Windows):</p>
+<p><img src="images/wrigley.jpg" class="img-fluid"></p>
+<section id="about" class="level2">
+<h2 class="anchored" data-anchor-id="about">About</h2>
 <ul>
-<li>You may receive the error <strong>Method ‘Run’ of object ‘IWshShell3’ failed</strong>. This likely means your VBA Module doens’t have the correct permissions to trigger R.</li>
-<li>Method 1: Changing your User Path
-<ul>
-<li>Navigate to: <code>Control Panel &gt;&gt; User Accounts &gt;&gt; User Accounts (Again) &gt;&gt; Change my environment variables</code></li>
-<li>In the top section labeled <code>User Variables</code>, edit the <code>PATH</code> variable to include the path where Rscript.exe is installed on your desktop.</li>
-<li>You may need to restart your computer afterwards.</li>
-</ul></li>
-<li>Method 2: Specify R Path within VBA
-<ul>
-<li>Substitute in the following: <code>RPath = C:/Users/nickledonne/Desktop/R-4.4.2/bin/bin/x64/Rscript.exe"</code></li>
-<li>This may prevent other users from running the script and is therefore <strong>NOT recommended</strong>.</li>
-</ul></li>
-<li>For more details see <em>Running RScript through command prompt</em> at <a href="http://shashiasrblog.blogspot.com/2013/" class="uri">http://shashiasrblog.blogspot.com/2013/</a></li>
+<li>Sex: M</li>
+<li>Breed: Pembroke Welsh Corgi</li>
+<li>Color: Tricolor</li>
+<li>Birthday: 03/16/2020</li>
+<li>Microchip: <a href="https://www.akcreunite.org/cares-pub/customer/priv/customerHome.car">956000012570863</a></li>
+<li>Neutered: Yes</li>
 </ul>
 </section>
-<section id="r-script" class="level2">
-<h2 class="anchored" data-anchor-id="r-script">R Script</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Script will receive the arguments passed via VBA script, sum those </span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># values together, and write to .csv</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>args <span class="ot">&lt;-</span> <span class="fu">commandArgs</span>(<span class="at">trailingOnly=</span>T)</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>var1 <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(args[<span class="dv">1</span>])</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>var2 <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(args[<span class="dv">2</span>])</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>Sum <span class="ot">&lt;-</span> var1 <span class="sc">+</span> var2</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Write to desktop</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(Sum, <span class="st">"C:/Users/nickledonne/Desktop/Test_Output.csv"</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Comments:</p>
+<section id="contact-information" class="level2">
+<h2 class="anchored" data-anchor-id="contact-information">📞 Contact Information</h2>
 <ul>
-<li>Make sure the variables in the VBA script align with the R script.</li>
-<li>Variables will be passed into R as strings. Use the as.numeric() function to convert those input variables as needed.</li>
+<li>Kelsey: (630) 400-5971</li>
+<li>Nick: (847) 845-9953</li>
+<li>Address: <a href="https://maps.app.goo.gl/5VYxGpGpBmkbqJg28" title="https://maps.app.goo.gl/5VYxGpGpBmkbqJg28">4034 Pompton Ct, Elgin, IL 60124</a></li>
+</ul>
+</section>
+<section id="vet-information" class="level2">
+<h2 class="anchored" data-anchor-id="vet-information">⚕️ Vet Information</h2>
+<ul>
+<li>Cleveland Veterinary Clinic</li>
+<li>Phone: (847) 697-4066</li>
+<li><a href="https://maps.app.goo.gl/DG5Bo5rwDdZ9KmDR9" title="https://maps.app.goo.gl/DG5Bo5rwDdZ9KmDR9">400 N McLean Blvd, South Elgin, IL 60177</a></li>
+</ul>
+</section>
+<section id="food" class="level2">
+<h2 class="anchored" data-anchor-id="food">🍗 Food</h2>
+<ul>
+<li>Twice a day: Before morning walk and ~5pm</li>
+<li><a href="https://image.chewy.com/is/image/catalog/91981_MAIN._AC_SL600_V1657661113_.jpg">One scoop</a> (1/3 Cup) w/small amount of whipped cream</li>
+</ul>
+<section id="treats-few-per-day" class="level4">
+<h4 class="anchored" data-anchor-id="treats-few-per-day">🍎 Treats (few per day)</h4>
+<ul>
+<li>Ice cubes</li>
+<li>Chunks of cheese</li>
+<li><a href="https://i5.walmartimages.com/seo/Dogsters-Nutly-Cheese-Flavor-Ice-Cream-Style-Treats-for-Dogs-14-oz-4-Cups-Frozen_9c188380-ac86-4002-a6c5-28e6c3eced35.8d8638f012254f5a9da6ad3a07584ddd.png?odnHeight=768&amp;odnWidth=768&amp;odnBg=FFFFFF">Dog Ice Cream</a></li>
+<li>Blueberry yogurt</li>
+<li>Hot Dog</li>
+<li>Pupperoni (Rope ball or sniffle mat)</li>
+</ul>
+</section>
+<section id="toxic-foods" class="level4">
+<h4 class="anchored" data-anchor-id="toxic-foods">☠️ <code>Toxic Foods</code></h4>
+<ul>
+<li>Chocolate</li>
+<li>Avocados</li>
+<li>Grapes/Raisins</li>
+<li>Garlic/Onions</li>
+<li>Jalapeño/Spices</li>
+</ul>
+</section>
+</section>
+<section id="walks" class="level2">
+<h2 class="anchored" data-anchor-id="walks">🦮 Walks</h2>
+<ul>
+<li>7:00 AM walks</li>
+<li>Approx. 2 mile before he gets tired</li>
+<li>Understands “Wait” and “Let’s Cross”
+<ul>
+<li><code>Pay close attention at crosswalks so he does not wonder into traffic</code></li>
+</ul></li>
+<li>Expect him to resist at the start of the walk, but he’ll cooperate once you get going</li>
+</ul>
+</section>
+<section id="potty-schedule" class="level2">
+<h2 class="anchored" data-anchor-id="potty-schedule">🧻 Potty Schedule</h2>
+<ul>
+<li>Twice a day (at least)
+<ul>
+<li>Morning walk</li>
+<li>In the evening after dinner</li>
+</ul></li>
+<li>Putting him in his harness is a game for him → He will run away so you have to chase him</li>
+<li>Has gone 8 hours in between potty breaks before</li>
+<li>Extra poop bags are in the coat closet across from the kitchen table</li>
+</ul>
+<!-- ## 📝 Notes -->
+<!-- -   When he wants something, he will touch the bells. We will typically run through a series of questions (listed above) until he reacts (huffs/twitches) to one of our questions. -->
+<!-- -   It is not unlike him to hide under Kelsey’s desk or under the bar seating all day. -->
+</section>
+<section id="commands" class="level2">
+<h2 class="anchored" data-anchor-id="commands">🗣️ Commands</h2>
+<ul>
+<li>Sit / Lay Down</li>
+<li>Up / Off</li>
+<li>Speak</li>
+<li>Touch (the bells)</li>
+<li>Wait</li>
+<li>Drop</li>
+<li>Kisses</li>
+<li>Paw</li>
+<li>High Five!</li>
+<li>Roll Over (where he falls to his side)</li>
+<li>Are you…
+<ul>
+<li>hungry?</li>
+</ul></li>
+<li>Do you…
+<ul>
+<li>have to go potty?</li>
+<li>want to go outside?</li>
+<li>want to go for a walk?</li>
+<li>want food?</li>
+<li>want a treat?</li>
+<li>want cuddles?</li>
+<li>want scratches?</li>
+<li>want to go to bed?</li>
+</ul></li>
 </ul>
 
 

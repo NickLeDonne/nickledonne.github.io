@@ -5,12 +5,13 @@ project:
   
 website: 
   title: "Nicholas LeDonne" 
-    
-  page-footer:
-    right: ""
+  page-navigation: false
+  # page-footer:
+  #   right: ""
   sidebar:
+    # background: "dark"
     logo: "images/profile_pic.jpg"
-    pinned: false
+    pinned: true
     align: center
     tools: 
       - icon: linkedin
@@ -19,8 +20,7 @@ website:
       - icon: github
         href: https://github.com/NickLeDonne
         text: "GitHub"
-  
-    style: "docked"
+    style: "floating"
     search: false
     collapse-level: 1
     contents:
@@ -36,10 +36,9 @@ website:
           - projects/pass-vba-through-r.qmd
           - projects/file-crawler.qmd
           - projects/vba-extractor.qmd
-
 format:
   html:
-    theme: cosmo
+    theme: darkly
     css: styles.css
     toc: true
     toc-depth: 2
