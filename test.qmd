@@ -1,43 +1,51 @@
 ---
-title: "Test"
+title: "Website Ideas"
 ---
 
-### Website Ideas
+-   [ ] Landing Page (About)
 
--   Landing Page (About)
+-   [x] Test Page - Create Skeleton
 
--   Create hidden page: <https://nickledonne.github.io/test.html>
+-   [x] Resume
 
--   Resume
+-   [x] Projects Page - Create Skeleton
 
--   Projects (In the style of a blog)
+    -   [ ] Personal notes on how to build a quarto website
 
-    -   Personal notes on how to build a quarto website
+    -   [x] Passing VBA to R
 
-    -   ~~Excel Scheduler~~
+    -   [x] File Crawler R Script
 
-    -   March Madness
+    -   [x] VBA Extractor Python Script
 
-    -   Passing VBA to R
+    -   [ ] CSV Extractor Python Script
 
-    -   ~~Snakes & Ladders~~
+    -   [ ] March Madness
 
--   Pembroke's (Hidden)
+    -   [ ] ~~Snakes & Ladders~~
 
-    -   Description of what Pembroke's is
+    -   [ ] ~~Excel Scheduler~~
 
-    -   Menu w/Recipes
+-   [x] Pembroke's - Create Skeleton
 
-    -   Brew methods
+    -   [ ] Description of what Pembroke's is
 
-    -   Coffee gear
+    -   [ ] Menu w/Recipes
 
-    -   Cocktails
+    -   [ ] Brew methods
 
--   Exam notes
+    -   [ ] Coffee gear
 
--   Wrigley Dog-Sitting website
+    -   [ ] Cocktails
 
--   Links to social networks
+-   [ ] Exam notes
 
-    -   GitHub, Linkedin, Facebook, Instagram, Untappd
+    -   [ ] Exam PA
+
+-   [ ] Wrigley Dog-Sitting website
+
+    -   [ ] Update sidebar w/photo + contact info
+
+-   [ ] Links to social networks
+
+    -   [ ] GitHub, Linkedin, ~~Facebook, Instagram, Untappd~~
