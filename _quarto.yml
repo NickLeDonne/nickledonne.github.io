@@ -5,6 +5,7 @@ project:
   
 website: 
   title: "Nicholas LeDonne" 
+  favicon: "images/favicon.png"
   page-navigation: false
   # page-footer:
   #   right: ""
