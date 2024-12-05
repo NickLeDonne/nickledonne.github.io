@@ -1,13 +1,14 @@
 ---
 title: "Pembroke's"
-favicon: "images/logo.png"
+favicon: "pembrokes/images/logo.png"
 sidebar: false
 format:
   html:
     css: styles.css
 ---
+
 ::: {style="text-align: center;"}
-<img src="images/logo.png" alt="Pembroke's Logo" width="200"/>
+<img src="pembrokes/images/logo.png" alt="Pembroke&apos;s Logo" width="200"/>
 :::
 
 ### Coming Soon...

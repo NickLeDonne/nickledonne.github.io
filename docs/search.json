@@ -1,10 +1,10 @@
 [
   {
-    "objectID": "pembrokes/index.html",
-    "href": "pembrokes/index.html",
-    "title": "Pembroke’s",
+    "objectID": "test.html",
+    "href": "test.html",
+    "title": "Website Ideas",
     "section": "",
-    "text": "Coming Soon…\n\n\nTraditional Espresso Offerings\n\nEspresso\nThis is a double shot of espresso showcasing our Jaywalker blend. It’s approximately two ounces of super-concentrated coffee.\nLatte\nEspresso-based drink with steamed milk and a thin, silky layer of textured milk.\nAmericano\nEspresso over water made to order. Similar amount of caffeine to batch brewed coffee of the same size.\nCortado\nA double shot drink with equal parts espresso and steamed milk.\nCappuccino\nEspresso-based drink with steamed milk and a thick, smooth layer of textured milk.\n\nAdd Syrup! Ask your barista what syrup options are available.\n\n\n\nExceptional Coffee Brewing Methods\n\nAeropress\nA manual brewing device that uses air pressure to push water through coffee grounds, producing a clean, smooth cup.\nChemex\nA pour-over brewing method using a paper filter, known for producing a clean, light, and crisp cup of coffee.\nCold Brew\nA slow-brewing method using cold water and coarse coffee grounds, steeped for an extended time for a smooth, mellow flavor.\nFrench Press\nA classic immersion brewing method where coffee grounds are steeped in hot water, then separated using a metal filter.\nV60\nA precise pour-over brewing method that emphasizes control over water flow for a balanced, flavorful cup."
+    "text": "Landing Page (About)\nTest Page - Create Skeleton\nResume\nProjects Page - Create Skeleton\n\nPersonal notes on how to build a quarto website\nPassing VBA to R\nFile Crawler R Script\nVBA Extractor Python Script\nCSV Extractor Python Script\nMarch Madness\nSnakes & Ladders\nExcel Scheduler\n\nPembroke’s - Create Skeleton\n\nDescription of what Pembroke’s is\nMenu w/Brew Methods & Recipes\nCocktails\nWhat others say - Read our customer testimonials to see why people love our services and keep coming back!\n\nExam notes\n\nExam PA\n\nWrigley Dog-Sitting website\n\nUpdate sidebar w/photo + contact info\n\nLinks to social networks\n\nGitHub, Linkedin, Facebook, Instagram, Untappd"
   },
   {
     "objectID": "wrigley.html#about",
@@ -157,10 +157,13 @@
     ]
   },
   {
-    "objectID": "test.html",
-    "href": "test.html",
-    "title": "Website Ideas",
+    "objectID": "pembrokes.html",
+    "href": "pembrokes.html",
+    "title": "Pembroke’s",
     "section": "",
-    "text": "Landing Page (About)\nTest Page - Create Skeleton\nResume\nProjects Page - Create Skeleton\n\nPersonal notes on how to build a quarto website\nPassing VBA to R\nFile Crawler R Script\nVBA Extractor Python Script\nCSV Extractor Python Script\nMarch Madness\nSnakes & Ladders\nExcel Scheduler\n\nPembroke’s - Create Skeleton\n\nDescription of what Pembroke’s is\nMenu w/Brew Methods & Recipes\nCocktails\nWhat others say - Read our customer testimonials to see why people love our services and keep coming back!\n\nExam notes\n\nExam PA\n\nWrigley Dog-Sitting website\n\nUpdate sidebar w/photo + contact info\n\nLinks to social networks\n\nGitHub, Linkedin, Facebook, Instagram, Untappd"
+    "text": "Coming Soon…\n\n\nTraditional Espresso Offerings\n\nEspresso\nThis is a double shot of espresso showcasing our Jaywalker blend. It’s approximately two ounces of super-concentrated coffee.\nLatte\nEspresso-based drink with steamed milk and a thin, silky layer of textured milk.\nAmericano\nEspresso over water made to order. Similar amount of caffeine to batch brewed coffee of the same size.\nCortado\nA double shot drink with equal parts espresso and steamed milk.\nCappuccino\nEspresso-based drink with steamed milk and a thick, smooth layer of textured milk.\n\nAdd Syrup! Ask your barista what syrup options are available.\n\n\n\nExceptional Coffee Brewing Methods\n\nAeropress\nA manual brewing device that uses air pressure to push water through coffee grounds, producing a clean, smooth cup.\nChemex\nA pour-over brewing method using a paper filter, known for producing a clean, light, and crisp cup of coffee.\nCold Brew\nA slow-brewing method using cold water and coarse coffee grounds, steeped for an extended time for a smooth, mellow flavor.\nFrench Press\nA classic immersion brewing method where coffee grounds are steeped in hot water, then separated using a metal filter.\nV60\nA precise pour-over brewing method that emphasizes control over water flow for a balanced, flavorful cup.",
+    "crumbs": [
+      "Pembroke's"
+    ]
   }
 ]
