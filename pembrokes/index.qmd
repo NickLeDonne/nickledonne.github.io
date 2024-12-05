@@ -1,0 +1,51 @@
+---
+title: "Pembroke's"
+favicon: "images/logo.png"
+sidebar: false
+format:
+  html:
+    css: styles.css
+---
+::: {style="text-align: center;"}
+<img src="images/logo.png" alt="Pembroke's Logo" width="200"/>
+:::
+
+### Coming Soon...
+
+### Traditional Espresso Offerings
+
+-   **Espresso**\
+    This is a double shot of espresso showcasing our Jaywalker blend. It's approximately two ounces of super-concentrated coffee.
+
+-   **Latte**\
+    Espresso-based drink with steamed milk and a thin, silky layer of textured milk.
+
+-   **Americano**\
+    Espresso over water made to order. Similar amount of caffeine to batch brewed coffee of the same size.
+
+-   **Cortado**\
+    A double shot drink with equal parts espresso and steamed milk.
+
+-   **Cappuccino**\
+    Espresso-based drink with steamed milk and a thick, smooth layer of textured milk.
+
+Add Syrup! Ask your barista what syrup options are available.
+
+------------------------------------------------------------------------
+
+### Exceptional Coffee Brewing Methods
+
+-   **Aeropress**\
+    A manual brewing device that uses air pressure to push water through coffee grounds, producing a clean, smooth cup.
+
+-   **Chemex**\
+    A pour-over brewing method using a paper filter, known for producing a clean, light, and crisp cup of coffee.
+
+-   **Cold Brew**\
+    A slow-brewing method using cold water and coarse coffee grounds, steeped for an extended time for a smooth, mellow flavor.
+
+-   **French Press**\
+    A classic immersion brewing method where coffee grounds are steeped in hot water, then separated using a metal filter.
+
+-   **V60**\
+    A precise pour-over brewing method that emphasizes control over water flow for a balanced, flavorful cup.

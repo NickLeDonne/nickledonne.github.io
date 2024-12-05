@@ -30,13 +30,11 @@ title: "Website Ideas"
 
     -   [ ] Description of what Pembroke's is
 
-    -   [ ] Menu w/Recipes
-
-    -   [ ] Brew methods
-
-    -   [ ] Coffee gear
+    -   [ ] Menu w/Brew Methods & Recipes
 
     -   [ ] Cocktails
+
+    -   [ ] What others say - Read our customer testimonials to see why people love our services and keep coming back!
 
 -   [ ] Exam notes
 

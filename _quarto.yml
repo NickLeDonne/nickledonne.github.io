@@ -21,7 +21,7 @@ website:
       - icon: github
         href: https://github.com/NickLeDonne
         text: "GitHub"
-    style: "floating"
+    style: "docked"
     search: false
     collapse-level: 1
     contents:
@@ -29,7 +29,7 @@ website:
         text: Resume
       # - href: sheet.qmd
       #   text: Google Sheets
-      # - href: pembrokes.qmd
+      # - href: pembrokes/index.qmd
       #   text: Pembroke's
       - section: projects/index.qmd
         text: Projects/Tools
