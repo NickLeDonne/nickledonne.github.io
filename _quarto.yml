@@ -12,7 +12,7 @@ website:
 
   sidebar:
     # background: "dark"
-    logo: "images/profile_pic.jpg"
+    logo: "images/profile-pic.jpg"
     pinned: true
     align: center
     tools: 
