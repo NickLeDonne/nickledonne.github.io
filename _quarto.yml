@@ -34,8 +34,6 @@ website:
     contents:
       - href: index.qmd
         text: Resume
-      - href: test2.qmd
-        text: Test 2
       # - href: sheet.qmd
       #   text: Google Sheets
       # - href: pembrokes.qmd

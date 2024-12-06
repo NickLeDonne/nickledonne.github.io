@@ -12,7 +12,7 @@ header-includes: # Center all H1 elements
     </style>
 ---
 
-[Chicago, IL]{.tiny-centered}
+<!-- [Chicago, IL]{.tiny-centered}  -->
 <!-- [[Nicholas.LeDonne\@gmail.com](mailto:Nicholas.LeDonne@gmail.com?subject=I%20saw%20your%20resume...)]{.tiny-centered} [[(847) 845-9953](tel:1-847-845-9953)]{.tiny-centered} <br> -->
 
 ## Work Experience
