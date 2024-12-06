@@ -9,24 +9,33 @@ website:
   page-navigation: false
   # page-footer:
   #   right: ""
+
   sidebar:
     # background: "dark"
     logo: "images/profile_pic.jpg"
     pinned: true
     align: center
     tools: 
-      - icon: linkedin
+      - icon: linkedin # https://icons.getbootstrap.com/
         href: https://www.linkedin.com/in/nicholas-ledonne-517114a7
         text: "LinkedIn"
       - icon: github
         href: https://github.com/NickLeDonne
         text: "GitHub"
+      # - icon: cup-hot-fill
+      #   href: https://buymeacoffee.com/nickledonne
+      #   text: "Buy Me a Coffee"
+      - icon: envelope-fill
+        aria-label: email
+        href: "mailto:NicholasLeDonne@gmail.com"
     style: "docked"
     search: false
     collapse-level: 1
     contents:
       - href: index.qmd
         text: Resume
+      - href: test2.qmd
+        text: Test 2
       # - href: sheet.qmd
       #   text: Google Sheets
       # - href: pembrokes.qmd

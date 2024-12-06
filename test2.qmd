@@ -1,0 +1,11 @@
+---
+title: "Pembroke's Coffee Co."
+author: "by Nick LeDonne"
+format:
+  dashboard:
+    theme: default
+    orientation: rows
+    nav-buttons:
+      - icon: person-circle
+        href: https://nickledonne.github.io
+---
