@@ -5,18 +5,16 @@ project:
   
 website: 
   title: "Nicholas LeDonne" 
-  favicon: "images/favicon.png"
   page-navigation: false
   # page-footer:
   #   right: ""
-
   sidebar:
     # background: "dark"
     logo: "images/profile-pic.jpg"
     pinned: true
     align: center
     tools: 
-      - icon: linkedin # https://icons.getbootstrap.com/
+      - icon: linkedin
         href: https://www.linkedin.com/in/nicholas-ledonne-517114a7
         text: "LinkedIn"
       - icon: github
@@ -28,7 +26,7 @@ website:
       - icon: envelope-fill
         aria-label: email
         href: "mailto:NicholasLeDonne@gmail.com"
-    style: "docked"
+    style: "floating"
     search: false
     collapse-level: 1
     contents:

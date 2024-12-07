@@ -1,15 +1,15 @@
 ---
 title: "Pembroke's Coffee Co."
 favicon: "pembrokes/images/logo.png"
-format:
-  html:
-    css: styles.css
-  dashboard:
-    theme: default
-    orientation: rows
-    nav-buttons:
-      - icon: person-circle
-        href: https://nickledonne.github.io
+# format:
+#   html:
+#     css: styles.css
+#   dashboard:
+#     theme: default
+#     orientation: rows
+#     nav-buttons:
+#       - icon: person-circle
+#         href: https://nickledonne.github.io
 sidebar: false
 ---
 
@@ -22,7 +22,7 @@ sidebar: false
 ### Traditional Espresso Offerings
 
 -   **Espresso**\
-    This is a double shot of espresso showcasing our Jaywalker blend. It's approximately two ounces of super-concentrated coffee.
+    This is a double shot of espresso, approximating roughly two ounces of super-concentrated coffee.
 
 -   **Latte**\
     Espresso-based drink with steamed milk and a thin, silky layer of textured milk.

@@ -2,9 +2,4 @@
 title: "Developed Projects/Tools"
 ---
 
--   [x] VBA Extractor
--   [x] Filelist Crawler
--   [x] Pass VBA to R
--   [ ] March Madness
--   [ ] Bulk Excel File Manipulation
--   [ ] Excel-to-CSV Splitter
+See the sidebar
